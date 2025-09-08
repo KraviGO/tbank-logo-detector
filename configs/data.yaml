@@ -1,0 +1,5 @@
+path: data/yolo
+train: train/images
+val: valid/images
+test: test/images
+names: ['tb_logo_shield']

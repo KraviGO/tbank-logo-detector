@@ -1,0 +1,10 @@
+model: yolov8n.pt
+imgsz: 640
+epochs: 25
+batch: 16
+patience: 10
+optimizer: auto
+device: mps
+workers: 2
+seed: 42
+single_cls: true
