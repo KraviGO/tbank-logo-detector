@@ -3,4 +3,6 @@
 /data
 /runs
 
+!*.dvc
 *.pt
+/models
