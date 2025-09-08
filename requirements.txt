@@ -1,3 +1,5 @@
 ultralytics==8.3.193
 opencv-python
 pillow
+mlflow==2.14.1
+dagshub==0.3.32
