@@ -1,0 +1,6 @@
+outs:
+- md5: 22c5305acc982586819630f738225ff6.dir
+  size: 806739615
+  nfiles: 25338
+  hash: md5
+  path: mixed_yolo_25_70_20_10
