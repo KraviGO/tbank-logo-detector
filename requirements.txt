@@ -3,3 +3,9 @@ opencv-python
 pillow
 mlflow==2.14.1
 dagshub==0.3.32
+
+fastapi==0.111.0
+uvicorn[standard]==0.30.0
+ultralytics==8.3.0
+opencv-python-headless==4.10.0.84
+pydantic==2.8.2
