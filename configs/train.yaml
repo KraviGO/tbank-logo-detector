@@ -1,10 +1,27 @@
-model: yolov8n.pt
 imgsz: 640
-epochs: 25
+epochs: 50
 batch: 16
-patience: 10
+patience: 20
 optimizer: auto
-device: mps
-workers: 2
-seed: 42
-single_cls: true
+lr0: 0.01
+lrf: 0.1
+warmup_epochs: 3
+weight_decay: 0.0005
+
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+degrees: 5.0
+translate: 0.08
+scale: 0.3
+shear: 2.0
+perspective: 0.0005
+flipud: 0.0
+fliplr: 0.5
+mosaic: 1.0
+mixup: 0.15
+copy_paste: 0.2
+erasing: 0.4
+
+conf: 0.25
+iou: 0.7
