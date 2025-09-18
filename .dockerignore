@@ -1,7 +1,6 @@
 train/data/
 train/runs/
 train/runs/
-models/
 .dvc/
 .dvc/cache/
 __pycache__/
