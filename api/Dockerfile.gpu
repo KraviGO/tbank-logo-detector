@@ -1,0 +1,24 @@
+FROM pytorch/pytorch:2.3.1-cuda12.1-cudnn8-runtime
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libglib2.0-0 libgl1-mesa-glx && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY api/requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+
+COPY api/ /app/
+
+ENV YOLO_WEIGHTS=/models/yolov8s_640_e50.pt \
+    YOLO_IMGSZ=640 \
+    YOLO_CONF=0.25 \
+    YOLO_IOU=0.7
+
+EXPOSE 8000
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
